@@ -1,0 +1,72 @@
+color-gray = #252525
+color-orange = #FF8060
+
+*
+	font-family "Ruda",sans-serif
+	text-align left
+
+html, body
+	overflow: hidden
+	height 100%
+	width 100%
+
+header
+	position absolute
+	height 50px
+	width 100%
+	background-color color-gray
+	z-index 1
+	img
+		position relative
+		float left
+		width 30px
+		height 30px
+		margin 8px 0px 0px 15px
+		&:hover
+			cursor pointer
+	.text-links
+		position relative
+		float left
+		margin 15px 0px 0px 15px
+		color white
+		&:hover
+			color color-orange
+			cursor pointer
+	#date
+		font-size 14px
+		position relative
+		float right
+		text-align right
+		margin 10px 10px 0px 0px
+		color white
+		cursor default
+
+section
+	position absolute
+	overflow auto
+	height: calc(100% - 50px);
+	width 100%
+	margin-top 50px
+	z-index 1
+
+/*CHANGE VIEW*/
+.view-animation.ng-enter
+	animation Fade-Enter-Anime 2.5s
+.view-animation.ng-leave
+	animation Fade-Leave-Anime 1s
+@keyframes Fade-Enter-Anime {
+    from {
+        opacity 0
+    }
+    to {
+        opacity 1
+    }
+}
+@keyframes Fade-Leave-Anime {
+    from {
+        opacity 1
+    }
+    to {
+        opacity 0
+    }
+}

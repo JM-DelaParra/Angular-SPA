@@ -1,0 +1,21 @@
+{
+  "name": "angular_SPA",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "author": "JM_DELAPARRA",
+  "devDependencies": {
+    "connect-livereload": "^0.5.3",
+    "express": "^4.12.3",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "~2.1.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-ignore": "^1.2.1",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jshint": "^1.10.0",
+    "gulp-ng-annotate": "~0.5.2",
+    "gulp-stylus": "^2.0.1",
+    "gulp-uglify": "^1.1.0",
+    "jshint-stylish": "^1.0.2",
+    "tiny-lr": "^0.1.5"
+  }
+}

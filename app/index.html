@@ -1,0 +1,32 @@
+<!DOCTYPE HTML />
+<html lang="es" ng-app="myApp" ng-strict-di>
+
+<head>
+    <title>ANGULAR SPA</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="assets/css/html5reset.css" />
+    <link rel="stylesheet" href="style.min.css" />
+    <script src="assets/libs/angular.min.js"></script>
+    <script src="assets/libs/angular.route.min.js"></script>
+    <script src="assets/libs/angular.animate.min.js"></script>
+    <script src="main.min.js"></script>
+</head>
+
+<body ng-controller="MainController as main">
+    <header>
+        <a href="http://angularjs.org/"><img ng-src="assets/img/angularjs.png" alt="AngularJS" /></a>
+        <span class="text-links" ng-click="main.goTo('one')" ng-bind="'VIEW ONE'"></span>
+        <span class="text-links" ng-click="main.goTo('two')" ng-bind="'VIEW TWO'"></span>
+        <span class="text-links" ng-click="main.goTo('three')" ng-bind="'VIEW THREE'"></span>
+        <div id="date">
+            <span ng-bind="main.date | date:'shortTime'"></span>
+            <br />
+            <span ng-bind="main.date | date:'dd-MM-yyyy'"></span>
+        </div>
+    </header>
+    <section>
+        <div class="view-animation" ng-view></div>
+    </section>
+</body>
+
+</html>

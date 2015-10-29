@@ -1,0 +1,28 @@
+<div id="view-three">
+    Click<br /> 
+        <button class='indent' ng-click='threeController.myFunction()'>Button</button><br /><br />
+    Class<br />
+        <button class='indent' ng-init='flagClass=false' ng-click='flagClass=!flagClass'>Toggle</button>
+        <span ng-class='{"color-red": flagClass}'> Color Me!</span><br /><br />
+    Hide/Show<br />
+        <button class='indent' ng-init='flagToggle=false' ng-click='flagToggle=!flagToggle'>Toggle</button>
+        <span ng-hide='flagToggle' ng-show='flagToggle'> Hide Me!</span><br /><br />
+    Repeat
+        <ul class='indent' ng-repeat='iterator in threeController.myVar'>
+            <li ng-bind='iterator.name + " (" + iterator.active + ")"' /></li>
+        </ul><br />
+    Checkbox
+        <form name='myForm' class='indent' ng-repeat='iterator in threeController.myVar'>
+            <input type="checkbox" ng-model="iterator.active" /> {{iterator.name}}
+        </form><br />
+    Dropdown
+        <span ng-bind='"(" + selected.id + ")"'></span>
+        <form name='myForm' class='indent' ng-init='selected=threeController.myVar[0]'>
+            <select ng-model='selected' ng-options="item.name for item in threeController.myVar" /></select>
+        </form><br />
+    Radio
+        <span ng-bind='"(" + threeController.selected + ")"'></span>
+        <form name='myForm' class='indent' ng-repeat='iterator in threeController.myVar' ng-init='threeController.selected=threeController.myVar[0].id'>
+            <input type='radio' ng-model='threeController.selected' value='{{iterator.id}}' /> {{iterator.name}}
+        </form>
+</div>
